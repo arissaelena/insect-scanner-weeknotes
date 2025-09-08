@@ -43,6 +43,14 @@ img {
     height: auto;
 }
 
+a:link {
+  color:#5C222F
+}
+
+a:visited {
+  color:#321c21
+}
+
 .navbar {
     background: var(--nvbg);
     height: 80px;
