@@ -290,7 +290,7 @@ img {
   }
   
   .weeknotes__wrapper {
-    display: grid;
+    display: inline;
     grid-template-columns: repeat(auto-fit, minmax(186px, fr));
     grid-auto-rows: minmax(100px, fr);
   }
