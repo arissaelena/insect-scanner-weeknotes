@@ -18,16 +18,14 @@ const highlightMenu = () => {
   let scrollPos = window.scrollY;
 
   // Adds 'highlight' class to my menu items
-  if (window.innerWidth > 960 && scrollPos < 600) {
-    homeMenu.classList.add('highlight');
+  if (window.innerWidth > 960 && scrollPos < 0) {
     aboutMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
+  } else if (window.innerWidth > 960 && scrollPos < 200) {
     aboutMenu.classList.add('highlight');
-    homeMenu.classList.remove('highlight');
     weeknotesMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
+  } else if (window.innerWidth > 960 && scrollPos < 1800) {
     weeknotesMenu.classList.add('highlight');
     aboutMenu.classList.remove('highlight');
     return;

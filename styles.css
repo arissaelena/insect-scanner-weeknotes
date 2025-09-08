@@ -274,7 +274,6 @@ img {
     background: var(--bg-colour);
     display: flex;
     flex-direction: column;
-    justify-content: left;
     align-items: center;
     height: 100%;
   }
@@ -292,17 +291,15 @@ img {
   
   .weeknotes__wrapper {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(186px, fr));
+    grid-auto-rows: minmax(100px, fr);
   }
   
   .weeknotes__card {
-    position: relative;
     width: 90vw;
-    height: 125px;
+    height: 120px;
     margin: 4px;
     border-radius: 4px;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -343,13 +340,12 @@ img {
   .weeknotes__btn {
     display: flex;
     justify-content: center;
-    margin-top: 16px;
     z-index: 2;
   }
   
   .weeknotes__card button {
     color: var(--cdbc);
-    padding: 14px 24px;
+    padding: 10px 22px;
     border: none;
     outline: none;
     border-radius: 4px;
