@@ -31,7 +31,28 @@
     </nav>
     <div class="container">
         <h1>Weeknote 25/08/25</h1>
-        <p>We have been working at the Cambridge University Museum of Zoology.</p>
+        
+        <h2>3D printing dome prototypes</h2>
+        <p>The latest design of our dome measures about 5700 x 5700 x 5000 mm, which is too large to fit in any 3D printers we might have access to. To combat this, we have been discussing breaking the dome down into parts to be reassembled after printing. <a href="https://www.museum.zoo.cam.ac.uk/staff/sam-ruggiero-cakir-education-assistant">Sam Ruggerio-Cakir</a>, the education assistant at the museum, has been helping us out with this. We considered breaking it down into individual panels or sixths and reconstructing it using joins or glue. Sam printed us a scaled-down prototype!</p>
+        <!-- IMAGES HERE -->
+        <p>To make the final product, we have come up with several ideas on how the model could be spliced in a way that allows the precise assembly of the dome (preferably without glue). We have been advised by Sam on the limitations of the 3D printer, and we are currently waiting on another prototype where the panels will be produced individually, which we will assemble once we receive it. We have also looked into commercial printing and hiring the Engineering department printers at the Dyson centre to find a cost-effective solution.</p>
+
+        <h2>Writing automatic camera app</h2>
+        <p>Following our current dome design, if we were to use it for scanning specimens, we would still need it to be supervised and a person would have to move the phone between the 4 positions to get images of all the parts of the specimen. To decrease the amount of work the person would have to do, Arissa has been working on an iPhone app, similar to the regular camera app, that would have the option of starting to take photos once every few seconds (a chosen time interval) so that once the phone is in position, photos of the specimen are taken automatically, without further input.</p>
+        <p>Ideally, these photos would be synchronized with when the specimen stops turning, but we currently don’t know whether it is possible to somehow connect the iPhone to the turntable.</p>
+
+        <h2>Researching preprocessing techniques</h2>
+        <p>Bea has been looking into how COLMAP works and the possibility of using it on both her own laptop and the gaming PC that the Insect Ecology group has access to. We have been communicating with <a href="https://tarzanzhao.github.io/">Hexu Zhao</a>, a PhD student at NYU who is researching distributed 3DGS. His research includes the development of <a href="https://github.com/nyu-systems/Grendel-GS">Grendel-GS</a>. The Grendel-GS GitHub repo outlines that the training times achieved when running 3DGS on a single NVIDIA A100 GPU typically range from 20-30 minutes. After communicating with Hexu and consulting the <a href="https://colmap.github.io/">COLMAP docs</a>, the gaming PC with its NVIDIA RTX A6000 GPU should be able to achieve comparable training times, but running it on a laptop with no GPU would likely consume excessive RAM for large images.</p>
+        <p>Bea also looked into installing nerfstudio for preprocessing which uses COLMAP to prepare the images for 3DGS using <a href="https://github.com/ArthurBrussee/brush">Brush</a>. The installation was successful on her laptop but it could not run due to an insufficient CUDA driver version. Now, we are in the process of installing it to the gaming PC, but various admin restrictions are making it more challenging.</p>
+
+        <h2>Cataloguing specimens</h2>
+        <p>Cataloguing of the British Moths collection has continued this week. The species of specimens catalogued this week was Scopula floslactata, the Cream Wave. This is a species in the Geometridae family, one of the three families of Lepidoptera that Tiff will catalogue over the next few years.</p>
+        <!-- IMAGE HERE -->
+
+        <h2>Insect corner</h2>
+        <p>Insect fact of the week: Peppered moths are usually white with black speckles across the wings. This pattern makes it easy for the moth to camouflage with lichen-covered trees. During the industrial revolution due to increased pollution and soot, the moths became darker. After the revolution, they became lighter as the pollution improved.</p>
+        <!-- IMAGES HERE -->
+
     </div>
 </body>
 </html>

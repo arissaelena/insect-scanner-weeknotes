@@ -31,7 +31,32 @@
     </nav>
     <div class="container">
         <h1>Weeknote 01/09/25</h1>
-        <p>We have been working at the Cambridge University Museum of Zoology.</p>
+        
+        <h2>nerfstudio preprocessing</h2>
+        <p>Through this week, Bea has been setting up the <a href="https://docs.nerf.studio/">nerfstudio</a> environment so we can use their preprocessing to train some 3DGS using <a href="https://github.com/ArthurBrussee/brush">Brush</a>, which accepts data in the nerfstudio format. Currently, our workflow involves aligning the images in <a href="https://www.agisoft.com/">Metashape</a> and using nerfstudio to preprocess the data. </p>
+
+        <h2>3D printing and designing our dome</h2>
+        <p>The first version of our dome was 3d printed once again, this time by Anna, who split it into 8 smaller parts and added snap connectors so we could try assembling a smaller version of the dome. After our meetings on Thursday (see below), we decided to redesign our dome to only have light sources around the camera for better lighting, a smooth sphere for a more uniform background (so light wouldn't bounce differently on the sharp edges) and to scale it down by a few centimeters (&lt;50 cm in diameter) so it would fit in the printer when spliced into 8 sections. Some modifications were made to the phone holder to allow a wider range of phone sizes to be used. After we agreed on a redesign, both Anna and Arissa started working on a second version (Anna in Fusion, and Arissa in Blender), with the plan to print both versions at a smaller scale before deciding which one to go with. We are hoping to have this done by the start of next week.</p>
+        <!-- IMAGES HERE -->
+
+        <h2>iPhone auto camera app</h2>
+        <p>Arissa finished writing a camera app for the iPhones, that has the option to choose the time interval at which photos should be taken, and auto focuses on the specimen before taking photos. This is so the person working on the scans would need to interact with the setup as little as possible, so they could just start the process of taking photos and the phone would keep going until they stopped it.</p>
+        <p>After finishing the camera app, it was added as another functionality to the 3D scan catalogue displaying app Bea made prior to our break.</p>
+        <!-- IMAGES HERE -->
+
+        <h2>Thursday meetings</h2>
+        <p>We went to the <a href="https://www.zoo.cam.ac.uk/research/groups/insect-ecology">Insect Ecology</a> and <a href="https://www.zoo.cam.ac.uk/research/conservation-science/agroecology-group">Agroecology</a> lab meeting this week, where Jerry Liu presented his findings from the past nine weeks. He gave an overview of drone images and LiDAR data from the <a href="https://www.zoo.cam.ac.uk/2025-26-projects/impacts-riparian-within-oil-palm-insect-movement-and-behaviour">RERTA river margin restoration project</a> in Indonesia that the Insect Ecology group has been working on.</p>
+        <p>Later that day we also met with <a href="https://anil.recoil.org/">Anil Madhavapeddy</a>, Alex Ho and <a href="https://4c.cst.cam.ac.uk/staff/dr-michael-winston-dales">Michael Dales</a> who gave us some invaluable input into the 3D printing and designing of our dome, lighting and photography system.</p>
+
+        <h2>Segment anything in 3D</h2>
+        <p>A few weeks ago, <a href="https://toao.com/">Sadiq</a> mentioned that he would be interested in whether Meta's new tool, <a href="https://segment-anything.com/">Segment Anything</a>, would be useful in identifying body parts of insects and segmenting them for further measurements and analysis. Since Segment Anything is designed for images, Bea looked into 3D alternatives and found <a href="https://github.com/Pointcept/SegmentAnything3D">SAM3D</a> and <a href="https://github.com/Jumpat/SegmentAnythingin3D">SA3D</a>. SAM3D works on point clouds with posed RGB images by first predicting 2D segmentation based on the posed images and then projects the 2D masks onto the 3D point cloud. From there, the 3D masks of partial scenes (from individual angles) are merged with adjacent frames to generate 3D masks of the whole scene. The model doesn't require fine-tuning or training so it appears to be simple to use once the workflow is established. SA3D works on a NeRF or 3DGS, so would be suitable for the models we aim to produce. It boasts 3D segmentation within minutes, although it doesn't mention any hardware requirements.</p>
+
+        <h2>Cataloguing</h2>
+        <p>Cataloguing efforts have continued this week, with Anna finishing off the Cream Wave specimens (Scopula floslactata) and moving onto the next column of Smoky Wave (Scopula ternata) specimens and finishing off that too. Bea did some cataloguing of Rusty Wave (Idaea inquinata) specimens and Small Fan-footed Wave (Idaea biselata) specimens.</p>
+
+        <h2>Insect corner</h2>
+        <p>Insect fact of the week: When Elephant Hawk-moth caterpillars feel threatened they can partially retract their head and puff up their bodies to mimic a snake!</p>
+        <!-- IMAGES HERE -->
     </div>
 </body>
 </html>
