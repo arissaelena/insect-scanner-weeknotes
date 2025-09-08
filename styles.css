@@ -376,6 +376,20 @@ img {
   .container {
     padding: 20px;
   }
+
+  .img-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .img-row img {
+    width: 10%;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: auto;
+    border: 2px solid var(--txt-colour);
+    border-radius: 5px;
+  }
   
   @media screen and (max-width: 1300px) {
     .weeknotes__wrapper {
