@@ -10,7 +10,9 @@
 :root.luna {
   --bg-colour: #cfdfd4;
   --txt-colour: #4d5e4d;
-  --link-color: #B35678;
+  --link-colour: #B35678;
+  --link-visited: #321c21;
+  --link-hover: #903556;
   --nvbg: #8da198;
   --nvg1: #4b6157;
   --nvg2: #405742;
@@ -78,11 +80,15 @@ tr:hover {
 }
 
 a:link {
-  color:#B35678
+  color: var(--link-colour);
 }
 
 a:visited {
-  color:#321c21
+  color: var(--link-visited);
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 .navbar {
