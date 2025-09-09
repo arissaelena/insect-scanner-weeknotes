@@ -17,9 +17,9 @@
   --nvlc: #355044;
   --bbg: #aec9be;
   --nvhv: #22312b;
-  --nvbg-gradient: #cbebd8;
   --tbbg: #3b564b;
   --hhsp: #43534d;
+  --tbc: #33413b;
   --cdc: #3d262c;
   --cdbg: #ae9ca3;
   --cdg: #83616a;
@@ -42,6 +42,39 @@ body {
 img {
     width: 400px;
     height: auto;
+}
+
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+thead {
+  background-color: var(--hhsp);
+  color: var(--bg-colour);
+}
+
+th {
+  padding: 16px;
+}
+
+td {
+  padding: 16px;
+  border: 1.8px solid var(--hhsp);
+}
+
+th:nth-child(even) {
+  background-color: var(--tbc);
+}
+
+th:nth-child(odd) {
+  background-color: var(--hhsp);
+}
+
+tr:hover {
+  background-color: var(--bbg);
 }
 
 a:link {
