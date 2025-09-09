@@ -32,19 +32,32 @@
         <h2>Specimen handling</h2>
         <p>On Monday we had our specimen handling induction with Russell Stebbings. To gain confidence taking specimens out of drawers and removing labels safely using forceps we spent some time cataloguing some British moths. Arissa was working with Lesser Cream Wave moths, Scopula immutata and Bea was working with Dotted Border Wave moths, Idaea sylvestraria. Since then, as part of our experiments we have handled a range of pinned insects including moths and butterflies of various shapes, sizes and colours, bees, and beetles! </p>
         <div class="img-row">
-            <img src="images/3006_1.png" alt="Photo 1">
-            <img src="images/3006_2.png" alt="Photo 2">
-            <img src="images/3006_3.png" alt="Photo 3">
+            <img src="images/3006_1.jpg" alt="Photo 1">
+            <img src="images/3006_2.jpg" alt="Photo 2">
+            <img src="images/3006_3.jpg" alt="Photo 3">
         </div>
         <h2>Experimenting with off-the-shelf software</h2>
         <p>On Tuesday we started experimenting with the iPhones Anil had purchased for the project. Arissa had done some research on existing photogrammetry and LiDAR iOS apps for object capture, and we attempted to make some 3D models of insects using Kiri Engine and Polycam. Since Polycam was having some sort of login issue that day, we focused on Kiri Engine on Tuesday. We made 10 attempts throughout the day using different techniques,  like LiDAR or photogrammetry from video or photo, making changes to the equipment used, like the stand for the insect. The different attempts had varying levels of success, with the worst attempts (Attempt 10, photo scan photogrammetry) having large parts of the specimen missing and the best attempts getting the general shape of the specimen’s wings, but not capturing patterns on the underside of wings or finer details like antennae or legs. We believe these issues are due to the small number of images Kiri Engine allows you to capture without paying and the lack of contrast between the finer details and their surroundings. </p>
         <p>We made some efforts on Tuesday to fix the Polycam issues, including calling in Anil, but all attempts were unsuccessful. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/3006_4.jpg" alt="Photo 4">
+            <img src="images/3006_5.jpg" alt="Photo 5">
+            <img src="images/3006_6.jpg" alt="Photo 6">
+        </div>
         
         <p>Through Wednesday, Thursday and Friday, we were able to experiment with Polycam, since the issues had resolved themselves. We experimented with using a moving piece of white plastazote as a background for the captures, which allowed us to better capture the antennae. However, this did result in a sort of grey cloud forming in the Gaussian splat, which can normally be mostly cropped out. We hope that a stationary rig will eliminate this problem. </p>
         <p>We experimented with insects with many different features. We wanted to test the accuracy of the scans with iridescence, transparency, dark and light colours, legs and antennae (and those that may be partially or completely missing), fluff, shiny surfaces and insects pinned ventrally and dorsally. We found that generally, Gaussian splat processing of about 1000 images (of the available 2000) produced the optimal result in a suitable amount of time. Photogrammetry picked up more detailed textures but was more prone to thin artefacts and missing antennae or legs in the capture. </p>
         <p>Below are some of our most interesting results. Left to right: Gaussian splat, photogrammetry, photo. Top to bottom: Dytiscus dimidiatus, and Pine Hawk-moth (Sphinx pinastri), specimen number I.2025.2368. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/3006_7.jpg" style="width: 24%;" alt="Photo 7">
+            <img src="images/3006_8.jpg" style="width: 24%;" alt="Photo 8">
+            <img src="images/3006_9.jpg" style="width: 24%;" alt="Photo 9">
+        </div>
+        <div class="img-row">
+            <img src="images/3006_10.jpg" style="width: 24%;" alt="Photo 10">
+            <img src="images/3006_11.jpg" style="width: 24%;" alt="Photo 11">
+            <img src="images/3006_12.jpg" style="width: 24%;" alt="Photo 12">
+        </div>
 
         <p>We also learned how to take measurements with calipers and using 2D digitisation and ImageJ (Tiff’s current standard) to compare these to measurements taken with the Polycam measure tool. The majority of these measurements proved to be very similar to those taken with ImageJ, without any calibration. </p>
         <h2>Designing a rig</h2>
@@ -52,17 +65,25 @@
         <p>After using white plastazote sheets to maintain a white background that would avoid confusion from a colourful background better, we started thinking about making a rig for taking more consistent scans (and without the need for two people to hold the camera and background). We first decided an initial version of this could include a white dome within which the specimens would be placed, with space for four different angles for the iPhones to be placed in when scanning, that would capture the entire specimen. Whilst the scAnt scanner should come with both a white and black dome for backgrounds, we attempted to scan nearly white specimens with the current white background setup we have, and found the off the shelf apps we’ve been using don’t have issues with separating the white of the specimens from that of the background, so we decided that a white dome would be enough as a starting point. </p>
         <p>We also added holes for lights on each facet of the dome, as in our scans so far the lighting isn’t bright enough to capture some of the darker specimen’s patterns, and thought about using fabric or lights made of a matte material to better diffuse the light uniformly around the dome. We’ve decided to try to print this initial version next week and check for improvements in the scans taken using Polycam, before trying to make any improvements on the currently available software (if possible to make it more suitable for our specific purpose of scanning moths and other insects), then refine the rig later on for the final version. </p>
         <p>We identified two possible options for scanning all around the specimens: either using a turntable to rotate the specimen (although the off the shelf apps generally struggled to register new positions unless the phone was the moving component), or looking into designing a ring shaped turntable using Fusion 360 to rotate the dome around the specimen instead. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/3006_13.jpg" style="width: 28%;" alt="Photo 13">
+            <img src="images/3006_14.jpg" style="width: 28%;" alt="Photo 14">
+        </div>
 
         <h2>API and export format processing research</h2>
         <p>We did some research on the ARKit and ObjectCapture APIs for iOS and macOS, including reading the documentation but to take this any further practically we need to use Xcode. </p>
         <p>Polycam can export Gaussian splat models in 15 different formats and photogrammetry models in 14. These can be in the form of images, video, blueprint, meshes and point clouds. The Insect Ecology group will soon receive a scAnt, a high fidelity 3D scanner designed for ants to use on the museum's collection. They have already got a capture of a Silver-Y moth from the scAnt. To allow comparison to the scAnt, we decided that (at least at first) we will focus on the .obj and .fbx export formats. When exporting in these formats, you receive a zip file containing the relevant collection of files. These can be reconstructed. We found some .obj and .fbx file loaders on GitHub which may prove useful. </p>
         <h2>Insect corner</h2>
         <p>Insect fact of the week: The Blotched Emerald is a moth with sexual dimorphism. You can tell sex by the fluffiness of the antennae! Males have fluffier antennae and females’ antennae are more stick-like. They’re also super pretty. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/3006_15.jpg" style="width: 30%;" alt="Photo 15">
+        </div>
 
         <p>We also held a live Pine Hawk-moth on Wednesday morning which was caught (and then released) in the weekly DAB moth trapping! They also exhibit the same sexual dimorphism as Blotched Emeralds so you can see the one we are holding here is a male with its fluffy antennae. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/3006_16.jpg" style="width: 28%;" alt="Photo 16">
+            <img src="images/3006_17.jpg" style="width: 28%;" alt="Photo 17">
+        </div>
 
         <h2>Zoology and CCI people</h2>
         <p>We had already met Tiff, our primary supervisor, in the spring before exams when she gave us a tour of the collections but we met her again properly on Monday. Through the week she has helped us navigate the stores, specimen handling and gave lots of tips and information on the Zoology side of the project. </p>
