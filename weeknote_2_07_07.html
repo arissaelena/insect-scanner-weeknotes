@@ -47,29 +47,34 @@
             </thead>
             <tr>
                 <td>100 (more top photos than bottom)</td>
-                <td>IMAGE</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_1.jpg" alt="Photo 1"></td>
+                <td><img src="images/0707_2.jpg" alt="Photo 2"></td>
             </tr>
             <tr>
                 <td>150</td>
-                <td>IMAGE</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_3.jpg" alt="Photo 3"></td>
+                <td><img src="images/0707_4.jpg" alt="Photo 4"></td>
             </tr>
             <tr>
                 <td>300</td>
-                <td>IMAGE</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_5.jpg" alt="Photo 5"></td>
+                <td><img src="images/0707_6.jpg" alt="Photo 6"></td>
             </tr>
             <tr>
                 <td>1000</td>
-                <td>IMAGE</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_7.jpg" alt="Photo 7"></td>
+                <td><img src="images/0707_8.jpg" alt="Photo 8"></td>
             </tr>
         </table>
 
         <p>Additionally, we scanned multiple different types of insects. We scanned bumblebees and a broad-bordered bee hawk-moth specimen to see how well the transparency of the wings is captured (a feature we previously identified as difficult to capture), and found gaussian splats are the only reliable model of the three methods we are currently considering (photogrammetry and LiDAR both have trouble making it transparent). </p>
         <p>In terms of using the LiDAR, the file we export from Polycam also contains a depth map that is created using the LiDAR. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row">
+            <img src="images/0707_9.jpg" alt="Photo 9">
+            <img src="images/0707_10.jpg" alt="Photo 10">
+            <img src="images/0707_11.jpg" alt="Photo 11">
+            <img src="images/0707_12.jpg" alt="Photo 12">
+        </div>
 
         <p>From left to right: broad-bordered bee hawk-moth gaussian splat (twice) on approximately 700 images, Cullum’s bumblebee gaussian splat, and Cullum’s bumblebee photogrammetry, both on approximately 1000 images. </p>
         <table>
@@ -85,21 +90,21 @@
                 <td>Uses overlapping photos to create a mesh representing the 3D model</td>
                 <td>Texture (like ridges) and colours (best at picking up structural colours)</td>
                 <td>Fuzzy / furry textures, small structures like legs and antennae, thin shapes (makes wings too thick), transparency</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_13.jpg" alt="Photo 13"></td>
             </tr>
             <tr>
                 <td>Gaussian splatting</td>
                 <td>Uses 3D ellipsoids to model the scene</td>
                 <td>Shapes (wings and body), transparency, small structures like legs and antennae, thin wings, eyes</td>
                 <td>Detailed patterns (smooths them out), textures</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_14.jpg" alt="Photo 14"></td>
             </tr>
             <tr>
                 <td>LiDAR</td>
                 <td>Uses light beams pointed at the object to find a depth map and create the 3D model</td>
                 <td>Textures and colours to an extent, it's good at fuzzy textures</td>
                 <td>Shapes, especially thin shapes: misses details like antennae and legs, or fills them in too thickly</td>
-                <td>IMAGE</td>
+                <td><img src="images/0707_15.jpg" alt="Photo 15"></td>
             </tr>
         </table>
 
@@ -110,12 +115,15 @@
         <p>On Thursdays we usually have our weekly meetings with the insect ecology and agroecology groups, as well as a morning meeting with Ed. This week with Ed, we discussed what we’ve done so far and our plan for the following week. He also gave us some good suggestions on which traits to focus on when trying to improve our current scanning methods. At the combined lab meeting, we listened to a talk from Alexander Cumming about the topic of his master’s thesis, on the effects of regenerative agriculture on crop health and yield. </p>
         <p>Apart from our usual meetings, this week we also had the chance to meet Josh Millar and his student Adan, who are working on a research project at Imperial, using LiDAR for room scans. We think it was useful to gain some insight into their use of LiDAR, as we currently haven’t been utilising that capability of the iPhones in our scans, even though it is still a challenge to make use of it when it comes to such small items (the moths). We also learned about some of the algorithms and sensors they have been using, but we haven’t had the chance to look into their suitability for our project yet. Adan suggested looking into the RANSAC algorithm and mm wave sensors. </p>
         <h2>Insect corner</h2>
+        <img src="images/0707_16.jpg" style="float: left;" alt="Photo 16">
         <p>Insect fact of the week: Some of the museum’s Death’s-head Hawk-Moths are from the bedchamber of King George III (Who was mad, they were collected by his physician)!</p>
-        <!-- IMAGES HERE -->
-
         <p>On Tuesday we attended the moth trapping taking place on the roof of the Zoology building in the morning, but unfortunately, due to the cold the night before, we only got to see one macromoth (Lesser Yellow Underwing) and two micro- ones (Garden Grass-veneer), so we’ve decided to try going again on another day to see more. </p>
         <p>On Wednesday after work we joined Tiff, Ed, Matt and a group of local wildlife trust members on a walk around Clare College, guided by their head gardener, Kate Hargreaves. The gardens are beautiful and we definitely recommend checking them out if you get the chance. </p>
-        <!-- IMAGES HERE -->
+        <div class="img-row" style="float: right;">
+            <img src="images/0707_17.jpg" alt="Photo 17">
+            <img src="images/0707_18.jpg" alt="Photo 18">
+            <img src="images/0707_19.jpg" alt="Photo 19">
+        </div>
     </div>
 </body>
 </html>
