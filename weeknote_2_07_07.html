@@ -39,14 +39,69 @@
         <p>After looking into the gaussian splatting APIs, we started creating more scans to build our dataset (which, from the API’s website, it seems should be between 20-40 items). We varied the number of photos used for the 3D models (most of the ones we have up to this point are using ~1000 photos), between 100 to 700. </p>
         <p>We found out that more photos doesn’t necessarily make the gaussian splat 3D models better (unlike with photogrammetry, where more photos almost always made them better and ensured there were no missing segments from the insect). Even in the cases where we only used 100 photos, since most of the photos were of the top of the moth, the patterns were captured very clearly and with a very high resolution, avoiding the general blurriness we usually see with this method. We believe this might be because the model doesn’t have multiple sides to take into account and get confused by different patterns (like confusing the top with the underside). </p>
         <p>Below is a summary of the scans we’ve taken of a Pine Hawk-moth specimen, varying the number of photos. </p>
-        <!-- TABLE HERE -->
+        <table>
+            <tr>
+                <td>Approximate number of photos</td>
+                <td>Screenshot of GS model from above</td>
+                <td>Screenshot of GS model from below</td>
+            </tr>
+            <tr>
+                <td>100 (more top photos than bottom)</td>
+                <td>IMAGE</td>
+                <td>IMAGE</td>
+            </tr>
+            <tr>
+                <td>150</td>
+                <td>IMAGE</td>
+                <td>IMAGE</td>
+            </tr>
+            <tr>
+                <td>300</td>
+                <td>IMAGE</td>
+                <td>IMAGE</td>
+            </tr>
+            <tr>
+                <td>1000</td>
+                <td>IMAGE</td>
+                <td>IMAGE</td>
+            </tr>
+        </table>
 
         <p>Additionally, we scanned multiple different types of insects. We scanned bumblebees and a broad-bordered bee hawk-moth specimen to see how well the transparency of the wings is captured (a feature we previously identified as difficult to capture), and found gaussian splats are the only reliable model of the three methods we are currently considering (photogrammetry and LiDAR both have trouble making it transparent). </p>
         <p>In terms of using the LiDAR, the file we export from Polycam also contains a depth map that is created using the LiDAR. </p>
         <!-- IMAGES HERE -->
 
         <p>From left to right: broad-bordered bee hawk-moth gaussian splat (twice) on approximately 700 images, Cullum’s bumblebee gaussian splat, and Cullum’s bumblebee photogrammetry, both on approximately 1000 images. </p>
-        <!-- TABLE HERE -->
+        <table>
+            <tr>
+                <td>Technique</td>
+                <td>How it works</td>
+                <td>Advantages</td>
+                <td>Disadvantages</td>
+                <td>Example</td>
+            </tr>
+            <tr>
+                <td>Photogrammetry</td>
+                <td>Uses overlapping photos to create a mesh representing the 3D model</td>
+                <td>Texture (like ridges) and colours (best at picking up structural colours)</td>
+                <td>Fuzzy / furry textures, small structures like legs and antennae, thin shapes (makes wings too thick), transparency</td>
+                <td>IMAGE</td>
+            </tr>
+            <tr>
+                <td>Gaussian splatting</td>
+                <td>Uses 3D ellipsoids to model the scene</td>
+                <td>Shapes (wings and body), transparency, small structures like legs and antennae, thin wings, eyes</td>
+                <td>Detailed patterns (smooths them out), textures</td>
+                <td>IMAGE</td>
+            </tr>
+            <tr>
+                <td>LiDAR</td>
+                <td>Uses light beams pointed at the object to find a depth map and create the 3D model</td>
+                <td>Textures and colours to an extent. Good at fuzzy textures</td>
+                <td>Shapes, especially thin shapes. Misses details like antennae and legs, or fills them in too thickly</td>
+                <td>IMAGE</td>
+            </tr>
+        </table>
 
         <p>In terms of the easiest insects to capture well with photogrammetry, Insect insights: case studies using 3D-printed specimen models as a tool for accessibility, education and outreach in a Natural History Museum has a range of recommendations. </p>
         <p style="font-style: italic;">“At present, we recommend that the material to be used in the production process of outreach drawers should have at least some of the following characteristics: (i) opaque cuticle (outermost part of an insect), (ii) heterogeneous colouring without metallic reflections, (iii) a more or less spherical body with relatively short and thick appendages.” </p>
