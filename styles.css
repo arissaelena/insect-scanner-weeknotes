@@ -49,6 +49,8 @@ img {
 table {
   width: 80%;
   margin: auto auto;
+  margin-bottom: 20px;
+  margin-top: 12px;
   border-collapse: collapse;
   text-align: center;
 }
@@ -429,6 +431,7 @@ a:hover {
 
   p {
     margin-bottom: 16px;
+    font-size: 18px;
   }
 
   .container h1 {
@@ -460,7 +463,7 @@ a:hover {
   }
 
   img {
-    width: 14%;
+    width: 20%;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 16px;
@@ -469,14 +472,23 @@ a:hover {
     border-radius: 5px;
   }
   
-  @media screen and (max-width: 1300px) {
-    .weeknotes__wrapper {
-      grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 800px) {
+    .img-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .weeknotes__wrapper {
-      grid-template-columns: 1fr;
+
+    .img-row img {
+    width: 70%;
+    height: auto;
+    border: 2px solid var(--txt-colour);
+    border-radius: 5px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
     }
   }
