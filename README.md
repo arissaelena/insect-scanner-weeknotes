@@ -6,4 +6,4 @@ This project is being worked on by Arissa-Elena Rotunjanu, Beatrice Spence and A
 
 The original project listing can be viewed [here](https://anil.recoil.org/ideas/digitisation-of-insects).
 
-You can view our website [here](https://arissaelena.github.io/insect-scanner-weeknotes/index.html)
+You can view our website [here](https://arissaelena.github.io/insect-scanner-weeknotes/index.html), and atom feed [here](https://arissaelena.github.io/insect-scanner-weeknotes/atom.xml).
