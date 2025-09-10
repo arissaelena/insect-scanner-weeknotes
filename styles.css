@@ -104,6 +104,22 @@ a:hover {
     top: 0;
     z-index: 999;
   }
+
+  .navbar__btn a:link {
+    color: var(--nvlc);
+  }
+
+  .navbar__item a:link {
+    color: var(--nvlc);
+  }
+
+  .navbar__btn a:hover {
+    color: var(--bbg);
+  }
+
+  .navbar__item a:hover {
+    color: var(--nvhv);
+  }
   
   .navbar__container {
     display: flex;
