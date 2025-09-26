@@ -27,7 +27,86 @@
     </nav>
     <div class="container">
         <h1>Wrap-up blogpost</h1>
-        <p>Coming soon!</p>
+        <h1><b>DoME</b> – <b>D</b>igitisation <b>o</b>f <b>M</b>useum <b>E</b>ntomology</h1>
+        <p>Throughout the summer, our work has been quite varied, but generally falls under three categories: practical experiments we did with off-the-shelf apps, research on processing techniques and difficult to capture characteristics, designing and building a rig and an app to use alongside it.</p>
+        <h2>Practical experiments</h2>
+        <p>In the first week, we started experimenting with the iPhones <a href="https://anil.recoil.org/">Anil</a> had purchased for the project. We attempted to make some 3D models of insects using <a href="https://www.kiriengine.app/">Kiri Engine</a> and <a href="https://poly.cam/">Polycam</a>. The different attempts had varying levels of success, with the worst attempts having large parts of the specimen missing and the best attempts getting the general shape of the specimen’s wings, but not capturing patterns on the underside of wings or finer details like antennae or legs.</p>
+        <div class="img-row">
+            <img src="images/3006_4.jpg" alt="Photo 1">
+            <img src="images/3006_5.jpg" alt="Photo 2">
+            <img src="images/3006_6.jpg" alt="Photo 3">
+        </div> 
+        <p>We experimented with insects with many different features. We wanted to test the accuracy of the scans with iridescence, transparency, dark and light colours, legs and antennae (and those that may be partially or completely missing), fluff, shiny surfaces and insects pinned ventrally and dorsally. We found that generally, Gaussian splat processing of about 1000 images (of the available 2000) produced the optimal result in a suitable amount of time. Photogrammetry picked up more detailed textures but was more prone to thin artefacts and missing antennae or legs in the capture.</p>
+        <p>Below are some of our most interesting results from the experimentation phase, as seen in our first weeknote. Left to right: Gaussian splat, photogrammetry, photo. Top to bottom: <em>Dytiscus dimidiatus</em>, and Pine Hawk-moth (<em>Sphinx pinastri</em>), specimen number I.2025.2368.</p>
+        <div class="img-row">
+            <img src="images/3006_7.jpg" alt="Photo 4">
+            <img src="images/3006_8.jpg" alt="Photo 5">
+            <img src="images/3006_9.jpg" alt="Photo 6">
+        </div>
+        <div class="img-row">
+            <img src="images/3006_10.jpg" alt="Photo 7">
+            <img src="images/3006_11.jpg" alt="Photo 8">
+            <img src="images/3006_12.jpg" alt="Photo 9">
+        </div>
+        <p>We also learned how to take measurements with calipers and using 2D digitisation and ImageJ (Tiff’s current standard) to compare these to measurements taken with the Polycam measure tool. The majority of these measurements proved to be very similar to those taken with <a href="https://imagej.net/ij/">ImageJ</a>, without any calibration. </p>
+
+        <h2>Processing research</h2>
+        <p>The experiments we did influenced the research we did into processing and pre-processing methods.</p>
+        <p>We started by looked into a range of Gaussian Splatting variations including reading <a href="https://dl.acm.org/doi/pdf/10.1145/3550469.3555413">Differentiable Point-Based Radiance Fields for Efficient View Synthesis</a>, <a href="https://arxiv.org/pdf/2308.04079">3D Gaussian Splatting for Real-Time Radiance Field Rendering</a>, and <a href="https://arxiv.org/pdf/2402.10259">GaussianObject: High-Quality 3D Object Reconstruction from Four Views with Gaussian Splatting</a>. These discuss a range of improvements on processing and rendering speed and capture quality as compared to traditional Gaussian Splatting and reading them helped to gain an understanding of the general method behind Gaussian Splatting.</p>
+        <p>We also looked into <a href="https://arxiv.org/pdf/2406.18533">On Scaling Up 3D Gaussian Splatting Training</a>, a new paper out of NYU on distributed Gaussian Splatting. Anil put us in contact with <a href="https://cs.nyu.edu/~apanda/">Asst. Prof. Panda</a>, a researcher at NYU working on a distributed method of training gaussian splatting models. We have been communicating with <a href="https://tarzanzhao.github.io/">Hexu Zhao</a>, a PhD student at NYU who is researching distributed 3DGS. His research includes the development of <a href="https://github.com/nyu-systems/Grendel-GS">Grendel-GS</a>. Hexu has since shared very impressive results, and we look to use the workflow he is developing for processing at the museum in the future.</p>
+        <div class="img-row">
+            <img src="images/0809_5.jpg" alt="Photo 10">
+            <img src="images/0809_6.jpg" alt="Photo 11">
+        </div>
+
+        <h2>Rig</h2>
+        <p>We created a rig for taking more consistent and partially automated scans. </p>
+        <div class="img-row">
+            <img src="images/3006_13.jpg" alt="Photo 12">
+            <img src="images/3006_14.jpg" alt="Photo 13">
+        </div>
+        <p>Our initial idea was a white dome surrounding the specimen, with space for iPhones to be placed at four different angles to capture the entire specimen. Our attempts of scanning nearly white specimens with the current white plastizoid background setup with off-the-shelf apps were successful, with no issues with separating the specimen from the background. Each facet of the dome contains holes for lights, to capture some of the darker specimen’s patterns. We also thought of using a ring-shaped turntable to rotate the dome and phone around the specimen, rather than the specimens rotating to reduce the vibrations and damage to them. <a href="https://www.museum.zoo.cam.ac.uk/staff/sam-ruggiero-cakir-education-assistant">Sam Ruggerio-Cakir</a>, the education assistant at the museum, helped us print the first miniature. Our design measures about 57 x 57 x 50 cm, which is too large to be 3D-printed, so we tried cutting the dome in pieces to print and then reassembling using connectors. This was reprinted by Anna, but the assembly wasn’t so successful, and we had to use tape. </p>
+        <div class="img-row">
+            <img src="images/0109_1.jpg" alt="Photo 14">
+            <img src="images/0109_2.jpg" alt="Photo 15">
+        </div>
+        <p>We met with Anil Madhavapeddy, <a href="https://hoiho.net/">Alex Ho</a> and <a href="https://digitalflapjack.com/">Michael Dales</a> who gave us some invaluable input into the 3D printing and designing of our dome, lighting and photography system. We decided to redesign our dome to only have light sources around the camera for better lighting using LED strips, a smooth interior for a more uniform background, and to scale it down slightly (less than 50cm in diameter) so it would fit in the printer when cut into 8 sections. Anna started working on a second version in Fusion, which addressed these main issues. This version also had smaller holes for the phone cameras to point through, and the addition of a low-angle view slot for a phone to capture all parts of a specimen. The camera positions now being aligned on one side of the dome should also help with creating a smooth background, and for camera holes to not be seen when taking photos from multiple perspectives. A miniature version was printed once again.</p>
+        <div class="img-row">
+            <img src="images/0809_1.jpg" alt="Photo 16">
+            <img src="images/0809_2.jpg" alt="Photo 17">
+        </div>
+        <p>Before moving onto a full-sized version of the new dome, Anna printed a small section containing two of the phone slots, to check that they fit well. The slots were able to hold a range of iPhone and phone models, including our 16 Pro. The cameras were also angled correctly, towards the centre of the dome. Small adjustments were made after the testing, such as filleting the camera holes and creating a cover for the bottom slot, then printing of the full dome began, using white PLA filament. </p>
+        <div class="img-row">
+            <img src="images/0809_3.jpg" alt="Photo 18">
+        </div>
+        <p>Specimens are illuminated by LED strips while we take photos, and we chose one with a high colour rendering index (CRI>90) and neutral coloured lighting (6000K). These were cut and arranged into squares using hippo connectors around each camera hole, then soldered to USB connectors that run through the cable hole at the bottom of the dome. These can be plugged into a USB hub that allows them to be switched on/off individually. We covered the black USB cables with white cable tape to minimise interference with scanning. All of the components were permanently fixed on the dome using nano tape.</p>
+        <div class="img-row">
+            <img src="images/1509_3.jpg" alt="Photo 19">
+            <img src="images/1509_4.jpg" alt="Photo 20">
+        </div>  
+        <p>The design of the motorised turntable that will sit under our dome broadly follows <a href="https://www.instructables.com/How-to-Make-a-Motorized-Lazy-Susan-With-a-Secret/">this</a> structure with some small necessary changes, including a hole in the middle, so that the dome is spun and not the specimen. The turntable plate is a disc cut from clear plastic with a matte white coating applied, and this was done by <a href="https://www.cst.cam.ac.uk/people/tb403">Tom</a>, the department hardware specialist. Ari designed a stand with an adjustable height for mounting the specimen, and configured a stepper motor to be used with the DM556 microstep driver and a Raspberry Pi to control the rotation of the dome. The gears connecting to the motor were printed by Anna and tested with this setup. Ari also developed an app for taking photos automatically at set intervals on Xcode. </p>
+        <div class="img-row">
+            <img src="images/2209_5.jpg" alt="Photo 21">
+            <img src="images/0809_4.jpg" alt="Photo 22">
+            <img src="images/1509_1.jpg" alt="Photo 23">
+        </div>  
+        <p>While we were working on the dome, we presented our progress on the project in the Thursday lab lunch meeting to the <a href="https://www.zoo.cam.ac.uk/research/groups/insect-ecology">Insect Ecology</a> and <a href="https://www.zoo.cam.ac.uk/research/conservation-science/agroecology-group">Agroecology</a> groups, describing the solution we have devised and the work we have done so far, as well as the intentions behind it. This was well-received by the audience, including a visiting researcher, <a href="https://bartomeuslab.com/">Ignasi (Nacho) Bartomeus</a> from Spain who also works extensively with museum collections. One of these was printed by Sam to help us get half of the dome printed by the time we had the presentation.</p>
+        <p>The dome is now complete with all panels printed by the end of this project. The last panel is attached using small circular magnets instead of dowels, so that it can be easily removed to work with specimens inside the dome. The lighting has been fully attached, and most of the moving turntable has been configured.</p>
+        <div class="img-row">
+            <img src="images/2209_4.jpg" alt="Photo 24">
+            <img src="images/2209_8.jpg" alt="Photo 25">
+            <img src="images/2209_6.jpg" alt="Photo 26">
+        </div>  
+
+        <h2>Cataloguing</h2>
+        <p>Cataloguing of the British Moths collection has continued on the side throughout the project. Species catalogued include Cream Wave (<em>Scopula floslactata</em>), Smoky Wave (<em>Scopula ternata</em>), Rusty Wave (<em>Idaea inquinata</em>) and Small Fan-footed Wave (<em>Idaea biselata</em>) specimens.</p>
+
+        <h2>Plans for the future</h2>
+        <p>We have a few extensions in mind for the project, as well as loose ends we would like to wrap up.</p>
+        <p>For our rig to be used more widely, it would be useful to parametrise the CAD design so the diameter can be altered without altering the size of the phone slots and visa-versa. It would also be useful to have an automatic camera app available for non-iPhones, and be able to view the model straight from the iPhone. Also, it may be more reliable to have the app take photos when it senses the iPhone is stationary, rather than at time intervals. We have also discussed the possibility of bringing the rig to the field and using it on live insect specimens through combining with a cooling system, to reduce their activity and allow scanning.</p>
+        <p>We are working on formally comparing 3DGS to photogrammetry and LiDAR using data captured with the dome and app, for the purpose of insect specimen digitisation, to learn which characteristics are best captured with which technology. For further extension, we can use the <a href="https://segment-anything.com/">Segment Anything model</a> in 3D to help isolate specific body parts within the 3D model and conduct further analysis of morphological traits. We are also interested in whether using the LiDAR data could enhance 3DGS results, or using different lighting to capture the models with multispectral imagery.</p>
+        <p>Finally, we would like to say a <b>big thank you</b> to Tiff, Anil and Ed for supervising us on this project! We are also very grateful to Sadiq, Sam, Hexu and Panda for their continued advice and support throughout the project, and the Insect Ecology and Agroecology groups for being so welcoming! We have really enjoyed working on this project and we hope it is useful to the UMZC!</p>
+
     </div>
 </body>
 </html>
